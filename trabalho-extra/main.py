@@ -1,4 +1,4 @@
-#import os
+import os
 
 '''
 chave1:elemento1
@@ -17,25 +17,35 @@ class FileDict(dict):
     def __init__(self,filepath,**kwargs):
         """Constructor method"""
         #defines the variables
-        self.filepath = filepath
-        self.dict = {}
-
-        file = open(self.filepath, 'r')
-        
-        file_text = file.read()
-        lines = file_text.split("\n")
-        
-        #the doc may have a empty line, this would generate an error
         try:
-            lines.remove("")
-        except ValueError:
+            self.filepath = filepath
+            self.dict = {}
+    
+            file = open(self.filepath, 'r')
+            
+            file_text = file.read()
+            lines = file_text.split("\n")
+            
+            #the doc may have a empty line, this would generate an error
+            try:
+                lines.remove("")
+            except ValueError:
+                pass
+            
+            for line in lines:
+                try:
+                    key, value = line.split(self.SEP)
+                    self.dict[key] = value
+                except ValueError:
+                    pass
+            file.close()
+             
+        except FileNotFoundError:
+            file = open(self.filepath, "w")
+            file.close()
+            #print("File not found")
             pass
         
-        for line in lines:
-            key, value = line.split(self.SEP)
-            self.dict[key] = value
-        
-        file.close()
         
     def __setitem__(self, key, value):
         """Creates a new item in the dict"""
@@ -50,28 +60,23 @@ class FileDict(dict):
     def pop(self,key):
         """Removes an item by the key"""
         
-        file = open(self.filepath, 'r')
-        file_text = file.read()
-        lines = file_text.split("\n")
-        file.close()
+        try:
+            self.dict.pop(key)
         
-        file = open(self.filepath, 'w+')
-        for line in lines:
-            if key in line:
-                lines.remove(line)
-                break
-        
-        for line in lines:
-            file.write(line) 
-            file.write("\n")
-        
-        file.close()
+            file = open(self.filepath, 'w+')
             
-        del self.dict[key]      
+            file.close()
+            
+        except KeyError:
+            print("KeyError")
     
     def __del__(self):
         """Delete the dict and the file"""
-        pass
+        
+        #os.remove(self.filepath)
+        #del self
+        
+        
 
 #TESTES
 
@@ -81,6 +86,7 @@ file_dict["chave5"] = "elemento5" # -->(2)
 print(file_dict.dict)
 file_dict.pop('chave1') # -->(3)
 print(file_dict.dict)
+file_dict = FileDict("dicioo.txt")
 
 '''
 (1) Cria o dicionário
