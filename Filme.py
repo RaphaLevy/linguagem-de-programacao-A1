@@ -1,12 +1,12 @@
 class Filme:
     def __init__(self, titulo, classificacao, duracao): 
         self._titulo = titulo
-        self._classificacao = int(classificacao)
-        self._duracao = int(duracao)
+        self._classificacao = classificacao
+        self._duracao = duracao
         
     @property
     def titulo(self):
-      return self._titulo
+        return self._titulo
             
     @titulo.setter
     def set_titulo(self, nome):
@@ -28,12 +28,13 @@ class Filme:
     def set_duracao(self, tempo):
          self._duracao = int(tempo)       
         
-#"""   
+"""   
 #TESTES DA CLASSE         
+
 filme01 = Filme("Thor", 12, 120)
 print(filme01.classificacao)
 
 filme01._duracao = 90
 filme01._classificacao = 0
 print(filme01.duracao, filme01.classificacao)
-#"""
+"""

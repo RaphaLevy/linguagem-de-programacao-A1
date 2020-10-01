@@ -21,12 +21,3 @@ class Sala():
         self.assentos = []
         for i in range(0, self.nro_assentos):
             self.assentos.append(1)
-#"""   
-#TESTES DA CLASSE         
-sala01 = Sala("Midgard", 5)
-print(sala01.assentos)
-
-sala01.tipo = "Asgard"
-sala01.assentos = 20
-print(sala01.tipo + ", " + sala01.assentos)
-#"""
