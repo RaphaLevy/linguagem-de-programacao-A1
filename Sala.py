@@ -1,3 +1,6 @@
+from Sessao import Sessao
+from Filme import Filme
+
 class Sala():
     MAX_ASSENTOS = 120
     MIN_ASSENTOS = 15
@@ -5,6 +8,7 @@ class Sala():
         #self._tipo(tipo)
         self._nro_assentos = nro_assentos
         self.assentos = range(self.nro_assentos)
+        self.sessoes = []
         
     '''        
     @property
@@ -28,6 +32,11 @@ class Sala():
             return 1
         else:
             del self 
+        
+        
+    def add_sessao(self, nova_sessao):
+        for cada_sessao in self.sessoes:
+            
         
     '''
     @assentos.setter
