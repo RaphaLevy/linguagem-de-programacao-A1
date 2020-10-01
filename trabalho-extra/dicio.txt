@@ -1,4 +1,0 @@
-chave1:elemento1
-chave2:elemento2
-chave2:elemento3
-chave4:elemento4
