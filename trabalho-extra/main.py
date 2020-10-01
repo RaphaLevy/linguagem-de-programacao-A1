@@ -19,7 +19,7 @@ class FileDict(dict):
         #defines the variables
         try:
             self.filepath = filepath
-            self.dict = {}
+            super().__init__(kwargs)
     
             file = open(self.filepath, 'r')
             
@@ -35,7 +35,7 @@ class FileDict(dict):
             for line in lines:
                 try:
                     key, value = line.split(self.SEP)
-                    self.dict[key] = value
+                    self[key] = value
                 except ValueError:
                     pass
             file.close()
@@ -49,7 +49,7 @@ class FileDict(dict):
         
     def __setitem__(self, key, value):
         """Creates a new item in the dict"""
-        self.dict[key] = value
+        self[key] = value
     
         file = open(self.filepath, 'a')
         dict_element = str("\n" + key + ":" + value)
@@ -61,7 +61,7 @@ class FileDict(dict):
         """Removes an item by the key"""
         
         try:
-            self.dict.pop(key)
+            self.pop(key)
         
             file = open(self.filepath, 'w+')
             
@@ -73,19 +73,19 @@ class FileDict(dict):
     def __del__(self):
         """Delete the dict and the file"""
         
-        #os.remove(self.filepath)
-        #del self
+        os.remove(self.filepath)
+        del self
         
         
 
 #TESTES
 
 file_dict = FileDict("dicio.txt") # -->(1)
-print(file_dict.dict)
+print(file_dict)
 file_dict["chave5"] = "elemento5" # -->(2)
-print(file_dict.dict)
+print(file_dict)
 file_dict.pop('chave1') # -->(3)
-print(file_dict.dict)
+print(file_dict)
 file_dict = FileDict("dicioo.txt")
 
 '''
