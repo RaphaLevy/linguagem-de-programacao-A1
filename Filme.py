@@ -1,31 +1,39 @@
-
 class Filme:
     def __init__(self, titulo, classificacao, duracao): 
-        self.titulo = titulo
-        self.classificacao = int(classificacao)
-        self.duracao = float(duracao)
+        self._titulo = titulo
+        self._classificacao = int(classificacao)
+        self._duracao = int(duracao)
         
     @property
     def titulo(self):
-      return self.titulo
+      return self._titulo
             
     @titulo.setter
-    def set_titulo(self, titulo):
-         self.titulo = titulo
+    def set_titulo(self, nome):
+         self._titulo = nome
          
     @property
     def classificacao(self):
-        return self.classificacao
+        return self._classificacao
     
     @classificacao.setter
-    def set_classificacao(self, classificacao):
-         self.classificacao = int(classificacao)
+    def set_classificacao(self, idade):
+         self._classificacao = int(idade)
          
     @property
     def duracao(self):
-        return self.duracao
+        return self._duracao
     
     @duracao.setter
-    def set_duracao(self, duracao):
-         self.duracao = int(duracao)       
+    def set_duracao(self, tempo):
+         self._duracao = int(tempo)       
         
+#"""   
+#TESTES DA CLASSE         
+filme01 = Filme("Thor", 12, 120)
+print(filme01.classificacao)
+
+filme01._duracao = 90
+filme01._classificacao = 0
+print(filme01.duracao, filme01.classificacao)
+#"""
