@@ -1,6 +1,9 @@
 def comprar_ingresso(salas):
     mostrar_sessoes(salas)
-    sessao = selecionar_sessao()
+    sala, sessao = selecionar_sessao()
+    print(sessao.assento)
+    assento = int(input("Selecione o assento:"))
+    
     
     
         
