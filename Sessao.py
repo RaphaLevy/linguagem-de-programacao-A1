@@ -1,3 +1,4 @@
+
 from datetime import date, time
 from Filme import Filme
 
@@ -24,8 +25,10 @@ class Sessao:
         self._data = data #'AAAA-MM-DD'
         self._hora = hora #'HH:MM:SS'
         self._filme = filme
-        self._assentos = range(nro_assentos)
-        
+        self.assentos = []
+        for i in range(nro_assentos):
+            self.assentos.append(i + 1)
+            
     @property
     def data(self):
         '''
@@ -122,3 +125,27 @@ class Sessao:
         
         self.filme = ver
 
+    def ocupar_acento(self, numero):
+        if numero in self.assentos:
+            aux = self.assentos.pop(numero - 1)
+            print(f"Assento {aux} {numero} {aux + 1} {numero - 1} reservado com sucesso")
+            return 1
+        else:
+            print("Assento {numero} não está disponível")
+            return 0
+        
+    def to_str(self):
+        print(f""" Filme: {self.filme.titulo}\n Data: {self.data} às {self.hora}\n Duração: {self.filme.duracao}""")
+'''    
+f = Filme("Mingau", 18, 60)
+s = Sessao("2020-02-02", "20:00:00", f, 30)
+
+print(s.hora)
+print(s.data)
+print(s.assentos)
+
+print(s.ocupar_acento(3))
+print(s.assentos)
+print(s.ocupar_acento(3))
+print(s.to_str())
+'''
