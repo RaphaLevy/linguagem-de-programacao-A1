@@ -30,7 +30,7 @@ class Sala():
         
     @property
     def nro_assentos(self):
-         '''
+        '''
         Getter do número de assentos
 
         Returns
@@ -138,13 +138,13 @@ class Sala():
         self.sessoes.remove(sessao)                
                     
     def verificar_programacao(self):
-         '''
+        '''
         Verifica a programação da sala, se há sessões múltiplas.
-
+    
         Returns
         -------
         None.
-
+    
         '''
         for cada_sessao in self.sessoes:
             cada_sessao.to_str()
