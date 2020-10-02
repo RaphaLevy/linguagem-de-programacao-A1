@@ -25,7 +25,10 @@ class Midgard(Sala):
             return 1
         else:
             del self 
-          
+            
+            
+#Testes da classe            
+#'''
 mid = Midgard(int(90), int(20))
 #print(mid.nro_assentos)
 
@@ -41,19 +44,25 @@ mid.sessoes.append(s)
 mid.sessoes.append(s2)
 mid.sessoes.append(s3)
 
+'''
 #print(mid.verificar_programacao())
 
 mid.rm_sessao(s2)
 
 #print(mid.verificar_programacao())
-
 '''
-print(s.hora)
-print(s.data)
-print(s.assentos)
 
-print(s.ocupar_acento(3))
+
+f = Filme("Mingau", 18, 60)
+s = Sessao("2020-02-02", "20:00:00", f, 30)
+
+#print(s.hora)
+#print(s.data)
+#print(s.assentos)
+
+for i in range(10):
+    s.ocupar_acento(i)
+    
+print(s.ingressos_vendidos())
 print(s.assentos)
-print(s.ocupar_acento(3))
-print(s.to_str())
-'''
+print(mid.calcular_receita(s))

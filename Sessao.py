@@ -152,6 +152,7 @@ for i in range(10):
     
 print(s.ingressos_vendidos())
 print(s.assentos)
+'''
 '''    
 print(s.ocupar_acento(3))
 print(s.assentos)

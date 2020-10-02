@@ -20,6 +20,8 @@ class Asgard(Sala):
             return 1
         else:
             del self 
+            
+#Testes da classe
 '''   
 asg = Asgard(int(20), int(20))
 print(asg.nro_assentos)

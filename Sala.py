@@ -54,8 +54,7 @@ class Sala():
     def rm_sessao(self, sessao):
         """
         remove uma das sessões administradas pelo Administrador
-
-        Parameters
+            
         ----------
         sessão a ser removida.
         """
@@ -66,6 +65,9 @@ class Sala():
         for cada_sessao in self.sessoes:
             cada_sessao.to_str()
                 
+            
+    def calcular_receita(self, sessao):
+        return sessao.ingressos_vendidos() * self.preco
             
     '''
     @assentos.setter

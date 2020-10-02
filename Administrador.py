@@ -82,5 +82,5 @@ class Administrador:
         
         self._senha = nova_senha
     
-    
+#Testes da classe
   
