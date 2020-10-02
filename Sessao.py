@@ -1,9 +1,9 @@
-from datetime import date, time
+from datetime import date, time, datetime, timedelta
 from Filme import Filme
 
 class Sessao:
     '''A classe Sessao define uma sessão por sua Data, Hora e Filme.'''
-    def __init__(self, data, hora, filme, nro_assentos):
+    def __init__(self, data, filme, nro_assentos):
         """
         Descrição da função init
 
@@ -22,7 +22,7 @@ class Sessao:
         """
         
         self._data = data #'AAAA-MM-DD'
-        self._hora = hora #'HH:MM:SS'
+        #self._hora = hora #'HH:MM:SS'
         self._filme = filme
         self.nro_assentos = nro_assentos
         self.assentos = []
@@ -59,39 +59,8 @@ class Sessao:
 
         '''
         
-        self._data = date.fromisoformat(val)
+        self._data = datetime.fromisoformat(val)
     
-    @property 
-    def hora(self):
-        '''
-        Getter da hora da sessão
-
-        Returns
-        -------
-        str
-            Getter que retorna a hora da sessão.
-
-        '''
-        
-        return self._hora
-    
-    @hora.setter
-    def set_hora(self, tempo):
-        '''
-        Setter da hora da sessão.
-
-        Parameters
-        ----------
-        tempo : time
-            Hora da sessão.
-
-        Returns
-        -------
-        None.
-
-        '''
-        
-        self._hora = time.fromisoformat(tempo)
     
     @property
     def filme(self):
@@ -125,7 +94,7 @@ class Sessao:
         
         self.filme = ver
 
-    def ocupar_acento(self, numero):
+    def ocupar_assento(self, numero):
         if numero in self.assentos:
             self.assentos.remove(numero)
             print(f"Assento {numero} reservado com sucesso")
@@ -135,10 +104,25 @@ class Sessao:
             return 0
         
     def to_str(self):
-        print(f" Filme: {self.filme.titulo}\n Data: {self.data} às {self.hora}\n Duração: {self.filme.duracao}\n\n")
+        print(f" Filme: {self.filme.titulo}\n Data: {self.data}\n Duração: {self.filme.duracao}\n\n")
         
     def ingressos_vendidos(self):
         return self.nro_assentos - len(self.assentos)
+    
+    def calcular_termino(self):
+        #print(self.filme.duracao)
+        
+        aux = self.filme.duracao/60
+        aux = str(aux)
+        horas, minutos = aux.split(".")
+        horas = int(horas)
+        minutos = int(minutos)
+        minutos *= 6
+        duracao = timedelta(hours = horas, minutes = minutos) #(minute = minutos, hour = horas)
+        inicio = datetime.fromisoformat(self.data)
+        return inicio + duracao
+        
+    
 '''
 f = Filme("Mingau", 18, 60)
 s = Sessao("2020-02-02", "20:00:00", f, 30)
@@ -148,14 +132,14 @@ s = Sessao("2020-02-02", "20:00:00", f, 30)
 #print(s.assentos)
 
 for i in range(10):
-    s.ocupar_acento(i)
+    s.ocupar_assento(i)
     
 print(s.ingressos_vendidos())
 print(s.assentos)
 '''
 '''    
-print(s.ocupar_acento(3))
+print(s.ocupar_assento(3))
 print(s.assentos)
-print(s.ocupar_acento(3))
+print(s.ocupar_assento(3))
 print(s.to_str())
 '''

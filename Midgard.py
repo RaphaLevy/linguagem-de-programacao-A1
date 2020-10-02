@@ -58,7 +58,7 @@ s = Sessao("2020-02-02", "20:00:00", f, 30)
 #print(s.assentos)
 
 for i in range(10):
-    s.ocupar_acento(i)
+    s.ocupar_assento(i)
     
 print(s.ingressos_vendidos())
 print(s.assentos)

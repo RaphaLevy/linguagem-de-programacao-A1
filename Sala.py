@@ -45,10 +45,26 @@ class Sala():
                     print("n pode não")
             else:
                 print("foi aqui ó")
-        print("mamaco")
+        print("aeo")
         '''
-        self.sessoes.append(nova_sessao)
         
+        
+        if len(self.sessoes) == 0:
+            print("Sessão adicionada com sucesso")
+            print(nova_sessao.to_str())
+            self.sessoes.append(nova_sessao)
+            return 1
+        else:
+            for cada_sessao in self.sessoes:
+                if datetime.fromisoformat(nova_sessao.data) >= datetime.fromisoformat(cada_sessao.data) and datetime.fromisoformat(nova_sessao.data) < cada_sessao.calcular_termino():
+                    print("Erro ao inserir nova sessão:")
+                    print(f"Já existe uma sessão entre {cada_sessao.data} e {cada_sessao.calcular_termino()}")
+                    return 0
+                else:
+                    print("Sessão adicionada com sucesso")
+                    print(nova_sessao.to_str())
+                    self.sessoes.append(nova_sessao)
+                    return 1
     def rm_sessao(self, sessao):
         """
         remove uma das sessões administradas pelo Administrador
