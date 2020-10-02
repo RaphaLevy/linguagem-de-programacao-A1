@@ -46,4 +46,3 @@ while continua:
         sala, sessao = mod.selecionar_sala_sessao(salas)
         ingressos = sessao.ingressos_vendidos()
         print(f"Foram vendidos {ingressos} ingressos para a sessão")
-    elif opcao == "6":
