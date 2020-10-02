@@ -49,7 +49,7 @@ class Sala():
                 if (nova_sessao.hora >= cada_sessao.hora and 
                     nova_sessao <= (cada_sessao.hora.timedelta(minutes = sessao.filme.duracao))
                     ):
-                    
+                        pass
                     
                 
             
