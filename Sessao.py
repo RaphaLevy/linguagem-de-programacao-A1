@@ -3,7 +3,7 @@ from Filme import Filme
 
 class Sessao:
     '''A classe Sessao define uma sessão por sua Data, Hora e Filme.'''
-    def __init__(self, data, hora, filme):
+    def __init__(self, data, hora, filme, nro_assentos):
         """
         Descrição da função init
 
@@ -24,6 +24,7 @@ class Sessao:
         self._data = data #'AAAA-MM-DD'
         self._hora = hora #'HH:MM:SS'
         self._filme = filme
+        self._assentos = range(nro_assentos)
         
     @property
     def data(self):
