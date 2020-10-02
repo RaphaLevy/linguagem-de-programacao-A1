@@ -51,6 +51,17 @@ class Sala():
                     ):
                         pass
                     
+    def rm_sessao(self, sessao):
+        """
+        remove uma das sessões administradas pelo Administrador
+
+        Parameters
+        ----------
+        sessão a ser removida.
+        """
+        
+        self._sessao.remove(sessao)                
+                    
     def verificar_programacao(self):
        for cada_sessao:
            print(sessao.filme, sessao.hora, sessao.data)                
