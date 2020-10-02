@@ -20,6 +20,7 @@ while continua:
     3-adicionar sessão
     4-remover sessão
     5-encerrar
+    6-encerrar sessão
           """)
 
     if opcao == "5":
@@ -42,4 +43,6 @@ while continua:
     elif opcao == "2":
         mod.mostrar_sessoes(salas)
     elif opcao == "1":
-        
+        sala, sessao = mod.selecionar_sala_sessao(salas)
+        ingressos = sessao.ingressos_vendidos()
+        print(f"Foram vendidos {ingressos} ingressos para a sessão")

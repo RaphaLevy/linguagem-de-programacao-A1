@@ -140,11 +140,11 @@ class Sala():
     def verificar_programacao(self):
         '''
         Verifica a programação da sala, se há sessões múltiplas.
-
+    
         Returns
         -------
         None.
-
+    
         '''
         for cada_sessao in self.sessoes:
             cada_sessao.to_str()
