@@ -1,6 +1,10 @@
 def comprar_ingresso(salas):
     mostrar_sessoes(salas)
-    input("favor, insira o número da sala:")
+    i = input("favor, insira o número da sala:")
+    try
+        sala[i - 1].verificar_programacao()
+    except:
+        print("Parece que a sala ou a sessão não existe, tente novamente")
     
     
         
