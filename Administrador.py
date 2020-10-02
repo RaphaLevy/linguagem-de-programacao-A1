@@ -32,10 +32,7 @@ class Administrador:
         -------
         str
             nome de usuário do Administrador.
-<<<<<<< HEAD
-=======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
         """
         
         return self._nome
@@ -45,18 +42,12 @@ class Administrador:
     def set_nome(self, novo_nome):
         """
         atribui um novo valor para o nome
-<<<<<<< HEAD
-=======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
         Parameters
         ----------
         novo_nome : str
             novo nome a ser atribuido ao administrador.
-<<<<<<< HEAD
-=======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
         """
         
         self._nome = novo_nome
@@ -66,18 +57,12 @@ class Administrador:
     def senha(self):
         """
         retorna a senha de acesso do Administrador.
-<<<<<<< HEAD
-=======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
         Returns
         -------
         str
             senha de acesso do Administrador.
-<<<<<<< HEAD
-=======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
         """
         
         return self._senha
