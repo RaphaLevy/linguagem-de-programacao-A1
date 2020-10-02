@@ -135,10 +135,8 @@ class Administrador:
         
         self._salas.remove(sala)
         
-   def get_ingressos_vendidos()
+   #def get_ingressos_vendidos():
 
-   def verificar_programacao(self, Sala):
-       for each Sessao in Sala:
+    def verificar_programacao(self, Sala):
+       for cada_sessao in Sala:
            print(Sessao.filme, Sessao.hora, Sessao.data)
-
-        """
