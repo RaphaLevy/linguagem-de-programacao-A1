@@ -23,5 +23,6 @@ while continua:
         print("Programa encerrado")
         continua = False
     elif opcao == "4":
-        
+        sala, sessao = mod.selecionar_sala_sessao(salas)
+        sala.rm_sessao(sessao)
         

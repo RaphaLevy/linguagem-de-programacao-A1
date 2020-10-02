@@ -48,4 +48,4 @@ def selecionar_sala_sessao(salas):
         j = int(input("favor, insira o número da sessão:"))
         return sala[i - 1], sala[i - 1].sessoes[j - 1]
     except:
-        print("Parece que a sala não existe, tente novamente")
+        print("Parece que a sala ou a sessão não existe, tente novamente")
