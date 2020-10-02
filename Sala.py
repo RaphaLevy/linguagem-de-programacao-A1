@@ -1,10 +1,16 @@
+from Sessao import Sessao
+from Filme import Filme
+from datetime import date, time, datetime, timedelta
+
 class Sala():
     MAX_ASSENTOS = 120
     MIN_ASSENTOS = 15
-    def _init_(self, nro_assentos):
+    def __init__(self, nro_assentos, preco):
         #self._tipo(tipo)
         self._nro_assentos = nro_assentos
-        self.assentos = range(self.nro_assentos)
+        self._assentos = range(self.nro_assentos)
+        self._sessoes = []
+        self._preco = preco
         
     '''        
     @property
@@ -29,6 +35,24 @@ class Sala():
         else:
             del self 
         
+    @property 
+    def preco(self):
+        return self._preco
+    
+    @preco.setter
+    def set_preco(self, valor):
+        self._preco = valor
+    
+    def add_sessao(self, nova_sessao):
+        for cada_sessao in self.sessoes:
+            if cada_sessao.data == nova_sessao.data:
+                if (nova_sessao.hora >= cada_sessao.hora and 
+                    nova_sessao <= (cada_sessao.hora.timedelta(minutes = sessao.filme.duracao))
+                    ):
+                        pass
+                    
+                
+            
     '''
     @assentos.setter
     def set_assentos(self, nro_assentos):
