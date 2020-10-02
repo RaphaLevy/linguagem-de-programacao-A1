@@ -1,14 +1,11 @@
-from Sala import Sala 
-from Midgard import Midgard 
-from Asgard import Asgard 
+import Sala from Sala
+import Midgard from Midgard
+import Asgard from Asgard
 
 class Administrador:
     def __init__(self, nome, senha, *salas):
         """
         construtor da classe Administrador 
-<<<<<<< HEAD
-=======
-
 
         Parameters
         ----------
@@ -18,10 +15,6 @@ class Administrador:
             senha de acesso do Administrador.
         *salas : list de Salas
             salas administradas pelo Administrador.
-<<<<<<< HEAD
-=======
-
-
         """
         
         self._nome = nome
@@ -33,9 +26,6 @@ class Administrador:
     def nome(self):
         """
         retorna o nome de usuário do Administrador.
-<<<<<<< HEAD
-=======
-
 
         Returns
         -------
@@ -44,7 +34,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
-
+>>>>>>> c6c490012e91adf42ff32c75019a294223aea290
         """
         
         return self._nome
@@ -57,7 +47,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
-
+>>>>>>> c6c490012e91adf42ff32c75019a294223aea290
         Parameters
         ----------
         novo_nome : str
@@ -65,7 +55,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
-
+>>>>>>> c6c490012e91adf42ff32c75019a294223aea290
         """
         
         self._nome = novo_nome
@@ -78,7 +68,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
-
+>>>>>>> c6c490012e91adf42ff32c75019a294223aea290
         Returns
         -------
         str
@@ -86,7 +76,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
-
+>>>>>>> c6c490012e91adf42ff32c75019a294223aea290
         """
         
         return self._senha
@@ -95,18 +85,12 @@ class Administrador:
     @senha.setter
     def set_senha(self, nova_senha):
         """
-        atribui um novo valor para a senha
-<<<<<<< HEAD
-=======
-
+        atribui um novo valor para a senha.
 
         Parameters
         ----------
         novo_nome : str
             nova senha a ser atribuido ao administrador.
-<<<<<<< HEAD
-=======
-
 
         """
         
@@ -117,17 +101,11 @@ class Administrador:
     def salas(self):
         """
         retorna as salas administradas pelo Administrador.
-<<<<<<< HEAD
-=======
-
 
         Returns
         -------
         list
             lista com as salas administradas pelo Administrador.
-<<<<<<< HEAD
-=======
-
 
         """
         
@@ -136,18 +114,11 @@ class Administrador:
     def add_sala(self, nova_sala):
         """
         adiciona uma nova sala na lista de salas administradas pelo Administrador
-<<<<<<< HEAD
-=======
-
 
         Parameters
         ----------
         nova_sala : Sala
             sala a ser adicionada.
-<<<<<<< HEAD
-=======
-
-
         """
         
         self._salas.append(nova_sala)
@@ -155,25 +126,19 @@ class Administrador:
     def rm_sala(self, sala):
         """
         remove uma sala da lista de salas administradas pelo Administrador
-<<<<<<< HEAD
-=======
-
 
         Parameters
         ----------
         nova_sala : Sala
             sala a ser removida.
-<<<<<<< HEAD
         """
         
         self._salas.remove(sala)
         
-   #"def get_ingressos_vendidos():"
+   def get_ingressos_vendidos()
 
-    def verificar_programacao(self, Sala, Sessao):
-        for cada_sessao in Sala:
+   def verificar_programacao(self, Sala):
+       for each Sessao in Sala:
            print(Sessao.filme, Sessao.hora, Sessao.data)
 
-
-
-        
+        """

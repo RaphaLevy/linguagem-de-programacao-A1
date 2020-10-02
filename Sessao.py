@@ -20,6 +20,7 @@ class Sessao:
         None.
 
         """
+        
         self._data = data #'AAAA-MM-DD'
         self._hora = hora #'HH:MM:SS'
         self._filme = filme
@@ -35,6 +36,7 @@ class Sessao:
             Getter que retorna a data da sessão.
 
         '''
+        
         return self._data
     
     @data.setter
@@ -52,6 +54,7 @@ class Sessao:
         None.
 
         '''
+        
         self._data = date.fromisoformat(val)
     
     @property 
@@ -65,6 +68,7 @@ class Sessao:
             Getter que retorna a hora da sessão.
 
         '''
+        
         return self._hora
     
     @hora.setter
@@ -82,6 +86,7 @@ class Sessao:
         None.
 
         '''
+        
         self._hora = time.fromisoformat(tempo)
     
     @property
@@ -95,6 +100,7 @@ class Sessao:
             Getter que retorna o nome do filme da sessão.
 
         '''
+        
         return self._filme
     
     @filme.setter
@@ -112,5 +118,6 @@ class Sessao:
         None.
 
         '''
+        
         self.filme = ver
 
