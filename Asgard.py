@@ -18,8 +18,9 @@ class Asgard(Sala):
             return 1
         else:
             del self 
-            
+'''   
 asg = Asgard(int(20), int(20))
 print(asg.nro_assentos)
 
 asg1 = Asgard(int(25), int(30))            
+'''
