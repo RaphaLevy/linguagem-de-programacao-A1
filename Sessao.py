@@ -122,24 +122,3 @@ class Sessao:
         inicio = datetime.fromisoformat(self.data)
         return inicio + duracao
         
-    
-'''
-f = Filme("Mingau", 18, 60)
-s = Sessao("2020-02-02", "20:00:00", f, 30)
-
-#print(s.hora)
-#print(s.data)
-#print(s.assentos)
-
-for i in range(10):
-    s.ocupar_assento(i)
-    
-print(s.ingressos_vendidos())
-print(s.assentos)
-'''
-'''    
-print(s.ocupar_assento(3))
-print(s.assentos)
-print(s.ocupar_assento(3))
-print(s.to_str())
-'''
