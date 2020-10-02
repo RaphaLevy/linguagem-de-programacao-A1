@@ -5,6 +5,8 @@ class Asgard(Sala):
     MIN_ASSENTOS = 15
     def __init__(self, nro_assentos, preco):  
         super().__init__(nro_assentos, preco)
+        self.sessoes = []
+
 
     @property
     def nro_assentos(self):

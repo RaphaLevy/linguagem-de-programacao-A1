@@ -8,9 +8,9 @@ class Sala():
     def __init__(self, nro_assentos, preco):
         #self._tipo(tipo)
         self._nro_assentos = nro_assentos
-        self._assentos = range(self.nro_assentos)
-        self._sessoes = []
+        #self._assentos = range(self.nro_assentos)
         self._preco = preco
+        self.sessoes = []
         
     '''        
     @property
@@ -60,11 +60,11 @@ class Sala():
         sessão a ser removida.
         """
         
-        self._sessao.remove(sessao)                
+        self.sessoes.remove(sessao)                
                     
     def verificar_programacao(self):
-       for cada_sessao:
-           print(sessao.filme, sessao.hora, sessao.data)                
+        for cada_sessao in self.sessoes:
+            cada_sessao.to_str()
                 
             
     '''
@@ -74,3 +74,4 @@ class Sala():
         for i in range(0, self.nro_assentos):
             self.assentos.append(1)
     '''
+    

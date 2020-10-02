@@ -24,6 +24,7 @@ class Sessao:
         self._data = data #'AAAA-MM-DD'
         self._hora = hora #'HH:MM:SS'
         self._filme = filme
+        self.nro_assentos = nro_assentos
         self.assentos = []
         for i in range(nro_assentos):
             self.assentos.append(i + 1)
@@ -126,23 +127,32 @@ class Sessao:
 
     def ocupar_acento(self, numero):
         if numero in self.assentos:
-            aux = self.assentos.pop(numero - 1)
-            print(f"Assento {aux} {numero} {aux + 1} {numero - 1} reservado com sucesso")
+            self.assentos.remove(numero)
+            print(f"Assento {numero} reservado com sucesso")
             return 1
         else:
-            print("Assento {numero} não está disponível")
+            print(f"Assento {numero} não está disponível")
             return 0
         
     def to_str(self):
-        print(f""" Filme: {self.filme.titulo}\n Data: {self.data} às {self.hora}\n Duração: {self.filme.duracao}""")
-'''    
+        print(f" Filme: {self.filme.titulo}\n Data: {self.data} às {self.hora}\n Duração: {self.filme.duracao}\n\n")
+        
+    def ingressos_vendidos(self):
+        return self.nro_assentos - len(self.assentos)
+'''
 f = Filme("Mingau", 18, 60)
 s = Sessao("2020-02-02", "20:00:00", f, 30)
 
-print(s.hora)
-print(s.data)
-print(s.assentos)
+#print(s.hora)
+#print(s.data)
+#print(s.assentos)
 
+for i in range(10):
+    s.ocupar_acento(i)
+    
+print(s.ingressos_vendidos())
+print(s.assentos)
+'''    
 print(s.ocupar_acento(3))
 print(s.assentos)
 print(s.ocupar_acento(3))
