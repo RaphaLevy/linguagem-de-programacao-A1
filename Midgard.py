@@ -17,3 +17,5 @@ class Midgard(Sala):
             
 mid = Midgard(int(90), int(20))
 print(mid.assentos)
+
+mid1 = Midgard(int(50), int(30))
