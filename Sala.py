@@ -47,7 +47,7 @@ class Sala():
         for cada_sessao in self.sessoes:
             if cada_sessao.data == nova_sessao.data:
                 if (nova_sessao.hora >= cada_sessao.hora and 
-                    nova_sessao <= (cada_sessao.hora.timedelta(minutes = sessao.filme.duracao))
+                    nova_sessao <= (cada_sessao.hora.timedelta(minutes = Sessao.filme.duracao))
                     ):
                         pass
                     
