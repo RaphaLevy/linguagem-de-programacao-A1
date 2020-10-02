@@ -1,4 +1,4 @@
-#from Sala import Sala
+#Na verdade essa classe não existe, percebemos que o sistema não precisa dela para funcionar
 
 class Guerreiro:
     """ A classe Guerreiro define um guerreiro por seu Nome e Idade"""

@@ -1,3 +1,4 @@
+#Na verdade essa classe não existe, percebemos que o sistema não precisa dela para funcionar
 from Sessao import Sessao
 from Sala import Sala 
 from Midgard import Midgard 

@@ -18,17 +18,14 @@ class Midgard(Sala):
     def set_nro_assentos(self, qtd_assentos):
         if qtd_assentos >= self.MIN_ASSENTOS and qtd_assentos <= self.MAX_ASSENTOS:
             self._nro_assentos = qtd_assentos
-
            #self._assentos = range(self.nro_assentos)
-
-
             return 1
         else:
             del self 
             
             
 #Testes da classe            
-#'''
+'''
 mid = Midgard(int(90), int(20))
 #print(mid.nro_assentos)
 
@@ -44,13 +41,13 @@ mid.sessoes.append(s)
 mid.sessoes.append(s2)
 mid.sessoes.append(s3)
 
-'''
+
 #print(mid.verificar_programacao())
 
 mid.rm_sessao(s2)
 
 #print(mid.verificar_programacao())
-'''
+
 
 
 f = Filme("Mingau", 18, 60)
@@ -66,3 +63,4 @@ for i in range(10):
 print(s.ingressos_vendidos())
 print(s.assentos)
 print(mid.calcular_receita(s))
+'''

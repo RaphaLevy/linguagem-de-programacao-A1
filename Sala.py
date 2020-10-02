@@ -12,16 +12,6 @@ class Sala():
         self._preco = preco
         self.sessoes = []
         
-    '''        
-    @property
-    def tipo(self):
-        return self._tipo
-            
-    @tipo.setter
-    def set_tipo(self, tipo):
-         self._tipo = tipo
-    '''
-    
     @property
     def nro_assentos(self):
         return self._nro_assentos
@@ -44,13 +34,21 @@ class Sala():
         self._preco = valor
     
     def add_sessao(self, nova_sessao):
+        '''
         for cada_sessao in self.sessoes:
             if cada_sessao.data == nova_sessao.data:
                 if (nova_sessao.hora >= cada_sessao.hora and 
                     nova_sessao <= (cada_sessao.hora.timedelta(minutes = Sessao.filme.duracao))
                     ):
-                        pass
-                    
+                        print("entrou")
+                else:
+                    print("n pode não")
+            else:
+                print("foi aqui ó")
+        print("mamaco")
+        '''
+        self.sessoes.append(nova_sessao)
+        
     def rm_sessao(self, sessao):
         """
         remove uma das sessões administradas pelo Administrador
@@ -76,4 +74,4 @@ class Sala():
         for i in range(0, self.nro_assentos):
             self.assentos.append(1)
     '''
-    
+
