@@ -1,0 +1,7 @@
+Sessao module
+=============
+
+.. automodule:: Sessao
+   :members:
+   :undoc-members:
+   :show-inheritance:

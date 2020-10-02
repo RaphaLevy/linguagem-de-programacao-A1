@@ -1,0 +1,7 @@
+interface\_adm module
+=====================
+
+.. automodule:: interface_adm
+   :members:
+   :undoc-members:
+   :show-inheritance:

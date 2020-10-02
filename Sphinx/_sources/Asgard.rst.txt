@@ -1,0 +1,7 @@
+Asgard module
+=============
+
+.. automodule:: Asgard
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+Guerreiro module
+================
+
+.. automodule:: Guerreiro
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+Midgard module
+==============
+
+.. automodule:: Midgard
+   :members:
+   :undoc-members:
+   :show-inheritance:

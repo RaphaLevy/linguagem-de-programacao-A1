@@ -146,7 +146,10 @@ class Sala():
         None.
     
         '''
+        cont = 0
         for cada_sessao in self.sessoes:
+            cont += 1
+            print(f"--Sessão{cont}--")
             cada_sessao.to_str()
                 
             

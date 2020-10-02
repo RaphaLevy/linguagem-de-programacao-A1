@@ -126,7 +126,9 @@ class Sessao:
         None.
 
         '''
-        print(f" Filme: {self.filme.titulo}\n Data: {self.data}\n Duração: {self.filme.duracao}\n\n")
+        string = f" Filme: {self.filme.titulo}\n Data: {self.data}\n Duração: {self.filme.duracao}\n"
+        print(string)
+        return string
         
     def ingressos_vendidos(self):
         '''

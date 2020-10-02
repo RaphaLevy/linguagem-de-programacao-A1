@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala module &#8212; documentação TrabalhoA1 1.0</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="Sessao module" href="Sessao.html" />
+    <link rel="prev" title="Midgard module" href="Midgard.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Sala">
+<span id="sala-module"></span><h1>Sala module<a class="headerlink" href="#module-Sala" title="Link permanente para este título">¶</a></h1>
+<dl class="py class">
+<dt id="Sala.Sala">
+<em class="property">class </em><code class="sig-prename descclassname">Sala.</code><code class="sig-name descname">Sala</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nro_assentos</span></em>, <em class="sig-param"><span class="n">preco</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Sala.Sala" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Base: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A classe sala define uma sala de cinema por seu número de assentos e preço.</p>
+<dl class="py attribute">
+<dt id="Sala.Sala.MAX_ASSENTOS">
+<code class="sig-name descname">MAX_ASSENTOS</code><em class="property"> = 120</em><a class="headerlink" href="#Sala.Sala.MAX_ASSENTOS" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="Sala.Sala.MIN_ASSENTOS">
+<code class="sig-name descname">MIN_ASSENTOS</code><em class="property"> = 15</em><a class="headerlink" href="#Sala.Sala.MIN_ASSENTOS" title="Link permanente para esta definição">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="Sala.Sala.add_sessao">
+<code class="sig-name descname">add_sessao</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nova_sessao</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Sala.Sala.add_sessao" title="Link permanente para esta definição">¶</a></dt>
+<dd><dl>
+<dt>for cada_sessao in self.sessoes:</dt><dd><dl>
+<dt>if cada_sessao.data == nova_sessao.data:</dt><dd><dl>
+<dt>if (nova_sessao.hora &gt;= cada_sessao.hora and</dt><dd><p>nova_sessao &lt;= (cada_sessao.hora.timedelta(minutes = Sessao.filme.duracao))
+):</p>
+<blockquote>
+<div><p>print(“entrou”)</p>
+</div></blockquote>
+</dd>
+<dt>else:</dt><dd><p>print(“n pode não”)</p>
+</dd>
+</dl>
+</dd>
+<dt>else:</dt><dd><p>print(“foi aqui ó”)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>print(“aeo”)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Sala.Sala.calcular_receita">
+<code class="sig-name descname">calcular_receita</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sessao</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Sala.Sala.calcular_receita" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Calcula a receita da sessão daquela sala de cinema</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parâmetros</dt>
+<dd class="field-odd"><p><strong>sessao</strong> (<em>int</em>) – Sessão da sala de cinema.</p>
+</dd>
+<dt class="field-even">Retorna</dt>
+<dd class="field-even"><p>Retorna o valor total da receita da sessão especificada.</p>
+</dd>
+<dt class="field-odd">Tipo de retorno</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Sala.Sala.nro_assentos">
+<em class="property">property </em><code class="sig-name descname">nro_assentos</code><a class="headerlink" href="#Sala.Sala.nro_assentos" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Getter do número de assentos</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorna</dt>
+<dd class="field-odd"><p>Retorna o número de assentos da sala.</p>
+</dd>
+<dt class="field-even">Tipo de retorno</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Sala.Sala.preco">
+<em class="property">property </em><code class="sig-name descname">preco</code><a class="headerlink" href="#Sala.Sala.preco" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Getter do preço da sala de cinema</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorna</dt>
+<dd class="field-odd"><p>Retorn o valor do preço de um ingresso por assento de uma sala de cinema.</p>
+</dd>
+<dt class="field-even">Tipo de retorno</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Sala.Sala.rm_sessao">
+<code class="sig-name descname">rm_sessao</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sessao</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Sala.Sala.rm_sessao" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>remove uma das sessões administradas pelo Administrador</p>
+<p>sessão a ser removida.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Sala.Sala.set_nro_assentos">
+<em class="property">property </em><code class="sig-name descname">set_nro_assentos</code><a class="headerlink" href="#Sala.Sala.set_nro_assentos" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Getter do número de assentos</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorna</dt>
+<dd class="field-odd"><p>Retorna o número de assentos da sala.</p>
+</dd>
+<dt class="field-even">Tipo de retorno</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Sala.Sala.set_preco">
+<em class="property">property </em><code class="sig-name descname">set_preco</code><a class="headerlink" href="#Sala.Sala.set_preco" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Getter do preço da sala de cinema</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorna</dt>
+<dd class="field-odd"><p>Retorn o valor do preço de um ingresso por assento de uma sala de cinema.</p>
+</dd>
+<dt class="field-even">Tipo de retorno</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Sala.Sala.verificar_programacao">
+<code class="sig-name descname">verificar_programacao</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Sala.Sala.verificar_programacao" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Verifica a programação da sala, se há sessões múltiplas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retorna</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Tipo de retorno</dt>
+<dd class="field-even"><p>None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">TrabalhoA1</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegação</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">docs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Administrador.html">Administrador module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Asgard.html">Asgard module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Filme.html">Filme module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Guerreiro.html">Guerreiro module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Interface.html">Interface module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Midgard.html">Midgard module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sala module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sessao.html">Sessao module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vendas.html">Vendas module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conf.html">conf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_adm.html">interface_adm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mod.html">mod module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">docs</a><ul>
+      <li>Previous: <a href="Midgard.html" title="capítulo anterior">Midgard module</a></li>
+      <li>Next: <a href="Sessao.html" title="próximo capítulo">Sessao module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Busca rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Ir" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Gabriel Machado, Raphael Levy e Gianlucca.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Sala.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

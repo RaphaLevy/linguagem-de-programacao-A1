@@ -1,0 +1,7 @@
+Filme module
+============
+
+.. automodule:: Filme
+   :members:
+   :undoc-members:
+   :show-inheritance:

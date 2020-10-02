@@ -1,0 +1,7 @@
+Sala module
+===========
+
+.. automodule:: Sala
+   :members:
+   :undoc-members:
+   :show-inheritance:

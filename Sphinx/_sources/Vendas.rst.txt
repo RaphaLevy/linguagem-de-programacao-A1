@@ -1,0 +1,7 @@
+Vendas module
+=============
+
+.. automodule:: Vendas
+   :members:
+   :undoc-members:
+   :show-inheritance:

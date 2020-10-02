@@ -1,0 +1,18 @@
+docs
+====
+
+.. toctree::
+   :maxdepth: 4
+
+   Administrador
+   Asgard
+   Filme
+   Guerreiro
+   Interface
+   Midgard
+   Sala
+   Sessao
+   Vendas
+   conf
+   interface_adm
+   mod

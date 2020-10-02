@@ -1,0 +1,7 @@
+Administrador module
+====================
+
+.. automodule:: Administrador
+   :members:
+   :undoc-members:
+   :show-inheritance:

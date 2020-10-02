@@ -1,0 +1,13 @@
+
+----
+ Filme: Jurassic Park
+ Data: 2020-02-02 12:00
+ Duração: 90
+1 ingressos vendidos
+Receita: R$40
+----
+ Filme: Rei Leão
+ Data: 2020-02-02 12:00
+ Duração: 90
+3 ingressos vendidos
+Receita: R$30
