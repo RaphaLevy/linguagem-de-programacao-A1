@@ -30,7 +30,7 @@ class Sala():
         
     @property
     def nro_assentos(self):
-         '''
+        '''
         Getter do número de assentos
 
         Returns
