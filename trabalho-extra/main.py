@@ -17,14 +17,18 @@ class FileDict(dict):
     #defines the separator for all FileDict objects
     SEP = ":" 
     def __init__(self,filepath,**kwargs):
-        """Recebe o caminho de um arquivo e o cria, caso ele não exista, ou o lê, se ele existir"""
+        """
+        Recebe o caminho de um arquivo e o cria, caso ele não exista, ou o lê, se ele existir
+        """
         
         """Constructor method"""
         #defines the variables
         try:
             self.filepath = filepath
             super().__init__(kwargs)
-            """O super carrega o conteúdo em um dicionário padrão"""
+            """
+            O super carrega o conteúdo em um dicionário padrão
+            """
     
             file = open(self.filepath, 'r')
             
@@ -69,7 +73,9 @@ class FileDict(dict):
         
         
     def __setitem__(self, key, value):
-        """Recebe uma chave e um valor, incluindo o valor caso a chave não exista, ou atualizando-o caso contrário"""
+        """
+        Recebe uma chave e um valor, incluindo o valor caso a chave não exista, ou atualizando-o caso contrário
+        """
         
         """Creates a new item in the dict"""
         super().__setitem__(key, value)
@@ -90,7 +96,9 @@ class FileDict(dict):
         
         
     def pop(self,key):
-        """Remove um item com a chamada da classe mãe, atualizando o arquivo com a remoção da linha devida"""
+        """
+        Remove um item com a chamada da classe mãe, atualizando o arquivo com a remoção da linha devida
+        """
         
         """Removes an item by the key"""
         try:
@@ -116,7 +124,9 @@ class FileDict(dict):
             print("KeyError")
 
     def __del__(self):
-        """Remove o dicionário por inteiro e deleta o arquivo"""
+        """
+        Remove o dicionário por inteiro e deleta o arquivo
+        """
         
         """Delete the dict and the file"""
         #Se tiver comentado é porque esqueci de tirar o comentário#tive que comentar pra testar se o resto estava funcionando
