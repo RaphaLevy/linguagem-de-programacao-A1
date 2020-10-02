@@ -1,8 +1,11 @@
 def comprar_ingresso(salas):
-    mostrar_sessoes(salas)
-    sala, sessao = selecionar_sessao()
-    print(sessao.assento)
+    sala, sessao = selecionar_sala_sessao(salas)
+    print(sessao.assentos)
     assento = int(input("Selecione o assento:"))
+    if sessao.ocupar_assento(assento):
+        print("Compra finalizada")
+    else:
+        print("Erro ao efetuar compra")
     
     
     
@@ -41,11 +44,14 @@ def iniciar():
 """)
 
 def selecionar_sala_sessao(salas):
-    mostrar_sessoes(salas)
-    i = int(input("favor, insira o número da sala:"))
-    print(i)
-    sala[i - 1].verificar_programacao()
-    j = int(input("favor, insira o número da sessão:"))
-    return sala[i - 1], sala[i - 1].sessoes[j - 1]
-    
+    try:
+        mostrar_sessoes(salas)
+        i = int(input("favor, insira o número da sala:"))
+        print(i)
+        salas[i - 1].verificar_programacao()
+        j = int(input("favor, insira o número da sessão:"))
+        print(j)
+        return salas[i - 1], salas[i - 1].sessoes[j - 1]
+    except IndexError:
+        print("parece que a sessão ou a sala não existem, tente novamente")
     

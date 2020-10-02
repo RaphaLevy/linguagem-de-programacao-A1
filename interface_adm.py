@@ -11,7 +11,7 @@ import mod
 
 filmes = [Filme("Rei Leão", 0, 90), Filme("Jurassic Park", 14, 90), Filme("Vida de Inseto", 0, 60), Filme("Godzilla", 12, 120)] 
 salas = [Midgard(100, 10), Midgard(90, 15), Asgard(25, 40), Asgard(20, 50)]
-
+salas[0].sessoes = [Sessao("2020-02-02 12:00", filmes[0], salas[0].nro_assentos)]
 continua = True
 while continua:
     opcao = input("""Selecione a opção
@@ -41,4 +41,5 @@ while continua:
         sala.add_sessao(Sessao(data, filme, sala.nro_assentos))
     elif opcao == "2":
         mod.mostrar_sessoes(salas)
+    elif opcao == "1":
         
