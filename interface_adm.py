@@ -6,8 +6,11 @@ from Sessao import Sessao
 from Administrador import Administrador
 from Guerreiro import Guerreiro
 
-import mod
 from datetime import date, time, datetime, timedelta
+import mod
+
+filmes = [Filme("Rei Leão", 0, 90), Filme("Jurassic Park", 14, 90), Filme("Vida de Inseto", 0, 60), Filme("Godzilla", 12, 120)] 
+salas = [Midgard(100, 10), Midgard(90, 15), Asgard(25, 40), Asgard(20, 50)]
 
 continua = True
 while continua:
@@ -25,4 +28,17 @@ while continua:
     elif opcao == "4":
         sala, sessao = mod.selecionar_sala_sessao(salas)
         sala.rm_sessao(sessao)
+    elif opcao == "3":
+        i_sala = int(input("insira o número da sala na qual deseja adicionar a nova sessão:"))
+        sala = salas[i_sala - 1]
+        data = input("insira a data da sessão (YYYY-MM-DD HH:MM:SS):")
+        cont = 0
+        for filme in filmes:
+            cont += 1
+            print(str(cont) + "-" + filme.titulo)
+        i_filme = int(input("insira o número do filme da nova sessão:"))
+        filme = filmes[i_filme - 1]
+        sala.add_sessao(Sessao(data, filme, sala.nro_assentos))
+    elif opcao == "2":
+        mod.mostrar_sessoes(salas)
         
