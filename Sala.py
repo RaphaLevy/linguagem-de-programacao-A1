@@ -138,7 +138,7 @@ class Sala():
         self.sessoes.remove(sessao)                
                     
     def verificar_programacao(self):
-         '''
+        '''
         Verifica a programação da sala, se há sessões múltiplas.
 
         Returns
