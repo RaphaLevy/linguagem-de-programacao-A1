@@ -65,6 +65,7 @@ class Sala():
                     print(nova_sessao.to_str())
                     self.sessoes.append(nova_sessao)
                     return 1
+                
     def rm_sessao(self, sessao):
         """
         remove uma das sessões administradas pelo Administrador
