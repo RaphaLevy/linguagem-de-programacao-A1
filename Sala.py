@@ -5,7 +5,7 @@ from datetime import date, time, datetime, timedelta
 class Sala():
     MAX_ASSENTOS = 120
     MIN_ASSENTOS = 15
-    def _init_(self, nro_assentos, preco):
+    def __init__(self, nro_assentos, preco):
         #self._tipo(tipo)
         self._nro_assentos = nro_assentos
         self._assentos = range(self.nro_assentos)

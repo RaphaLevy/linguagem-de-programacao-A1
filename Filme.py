@@ -24,7 +24,7 @@ class Filme:
     @classificacao.setter
     def set_classificacao(self, idade):
         """Setter da classificação do filme"""
-         self._classificacao = int(idade)
+        self._classificacao = int(idade)
          
     @property
     def duracao(self):
@@ -34,7 +34,7 @@ class Filme:
     @duracao.setter
     def set_duracao(self, tempo):
         """Setter da duração do filme"""
-         self._duracao = int(tempo)       
+        self._duracao = int(tempo)       
         
 """   
 #TESTES DA CLASSE         

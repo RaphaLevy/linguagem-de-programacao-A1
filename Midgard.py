@@ -6,6 +6,10 @@ class Midgard(Sala):
     def __init__(self, nro_assentos, preco):  
         super().__init__(nro_assentos, preco)
         
+    @property
+    def nro_assentos(self):
+        return super().assentos
+        
     @nro_assentos.setter
     def set_nro_assentos(self, qtd_assentos):
         if qtd_assentos >= self.MIN_ASSENTOS and qtd_assentos <= self.MAX_ASSENTOS:
