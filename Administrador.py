@@ -1,6 +1,6 @@
-import Sala from Sala
-import Midgard from Midgard
-import Asgard from Asgard
+from Sala import Sala 
+from Midgard import Midgard 
+from Asgard import Asgard 
 
 class Administrador:
     def __init__(self, nome, senha, *salas):
@@ -9,7 +9,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         Parameters
         ----------
         nome : str
@@ -21,7 +21,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         """
         
         self._nome = nome
@@ -36,7 +36,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         Returns
         -------
         str
@@ -44,7 +44,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         """
         
         return self._nome
@@ -57,7 +57,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         Parameters
         ----------
         novo_nome : str
@@ -65,7 +65,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         """
         
         self._nome = novo_nome
@@ -78,7 +78,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         Returns
         -------
         str
@@ -86,7 +86,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         """
         
         return self._senha
@@ -99,7 +99,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         Parameters
         ----------
         novo_nome : str
@@ -107,7 +107,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         """
         
         self._senha = nova_senha
@@ -120,7 +120,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         Returns
         -------
         list
@@ -128,7 +128,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         """
         
         return self.salas
@@ -139,7 +139,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         Parameters
         ----------
         nova_sala : Sala
@@ -147,7 +147,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         """
         
         self._salas.append(nova_sala)
@@ -158,7 +158,7 @@ class Administrador:
 <<<<<<< HEAD
 =======
 
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
+
         Parameters
         ----------
         nova_sala : Sala
@@ -168,14 +168,12 @@ class Administrador:
         
         self._salas.remove(sala)
         
-   def get_ingressos_vendidos()
+   #"def get_ingressos_vendidos():"
 
-   def verificar_programacao(self, Sala):
-       for each Sessao in Sala:
+    def verificar_programacao(self, Sala, Sessao):
+        for cada_sessao in Sala:
            print(Sessao.filme, Sessao.hora, Sessao.data)
-=======
 
-        """
+
+
         
-        self._salas.remove(sala)
->>>>>>> c6c490012e91adf42ff32c75019a294223aea290
