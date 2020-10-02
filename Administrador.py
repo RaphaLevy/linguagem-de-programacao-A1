@@ -1,3 +1,4 @@
+from Sessao import Sessao
 from Sala import Sala 
 from Midgard import Midgard 
 from Asgard import Asgard 
@@ -137,6 +138,6 @@ class Administrador:
         
    #def get_ingressos_vendidos():
 
-    def verificar_programacao(self, Sala):
-       for cada_sessao in Sala:
+    def verificar_programacao(self, sala):
+       for cada_sessao in sala:
            print(Sessao.filme, Sessao.hora, Sessao.data)
