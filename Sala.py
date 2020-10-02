@@ -51,6 +51,9 @@ class Sala():
                     ):
                         pass
                     
+    def verificar_programacao(self, sala):
+       for cada_sessao in sala:
+           print(Sessao.filme, Sessao.hora, Sessao.data)                
                 
             
     '''

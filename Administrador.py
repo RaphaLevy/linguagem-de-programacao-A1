@@ -4,7 +4,7 @@ from Midgard import Midgard
 from Asgard import Asgard 
 
 class Administrador:
-    def __init__(self, nome, senha, *salas):
+    def __init__(self, nome, senha):
         """
         construtor da classe Administrador 
 
@@ -20,7 +20,7 @@ class Administrador:
         
         self._nome = nome
         self._senha = senha
-        self._salas = salas
+
         
         
     @property
@@ -98,46 +98,4 @@ class Administrador:
         self._senha = nova_senha
     
     
-    @property
-    def salas(self):
-        """
-        retorna as salas administradas pelo Administrador.
-
-        Returns
-        -------
-        list
-            lista com as salas administradas pelo Administrador.
-
-        """
-        
-        return self.salas
-    
-    def add_sala(self, nova_sala):
-        """
-        adiciona uma nova sala na lista de salas administradas pelo Administrador
-
-        Parameters
-        ----------
-        nova_sala : Sala
-            sala a ser adicionada.
-        """
-        
-        self._salas.append(nova_sala)
-    
-    def rm_sala(self, sala):
-        """
-        remove uma sala da lista de salas administradas pelo Administrador
-
-        Parameters
-        ----------
-        nova_sala : Sala
-            sala a ser removida.
-        """
-        
-        self._salas.remove(sala)
-        
-   #def get_ingressos_vendidos():
-
-    def verificar_programacao(self, sala):
-       for cada_sessao in sala:
-           print(Sessao.filme, Sessao.hora, Sessao.data)
+  
