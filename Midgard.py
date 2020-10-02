@@ -8,7 +8,7 @@ class Midgard(Sala):
         
     @property
     def nro_assentos(self):
-        return self.nro_assentos
+        return self._nro_assentos
         
     @nro_assentos.setter
     def set_nro_assentos(self, qtd_assentos):

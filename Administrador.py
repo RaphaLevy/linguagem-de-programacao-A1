@@ -1,6 +1,6 @@
-import Sala from Sala
-import Midgard from Midgard
-import Asgard from Asgard
+from Sala import Sala 
+from Midgard import Midgard 
+from Asgard import Asgard 
 
 class Administrador:
     def __init__(self, nome, senha, *salas):
