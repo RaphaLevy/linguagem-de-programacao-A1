@@ -21,11 +21,6 @@ salas[0].sessoes[0].assentos.remove(10)
 salas[0].sessoes[1].assentos.remove(1)
 salas[2].sessoes[0].assentos.remove(5)
 
-
-
-
-
-
 '''
 salas[0].add_sessao(Sessao("2020-02-02 12:00:00", filmes[0], salas[0].nro_assentos))
 salas[0].add_sessao(Sessao("2020-02-02 13:30:00", filmes[0], salas[0].nro_assentos))
