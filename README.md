@@ -1,5 +1,5 @@
 # A1LP-Valhalla-cinema
- repositório com os códigos da atividade avaliativa da disciplina de Linguagens de Programação do curso de Ciência de Dados da FGV
+ Primeira avaliação do curso de Linguagens de Programação da Escola de Matemática Aplicada da FGV-RJ, ministrado pelo professor Rafael de Pinho André em 2020.2.
 
 ## Enunciado do trabalho
 
